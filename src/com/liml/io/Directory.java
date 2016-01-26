@@ -41,6 +41,7 @@ public final class Directory {
             return "dirs: "+ PPrint.pformat(dirs) +
                     "\n\nfiles: "+PPrint.pformat(files);
         }
+    }
         public static TreeInfo walk(String start,String regex){
             return recurseDirs(new File(start),regex);
         }
@@ -73,5 +74,5 @@ public final class Directory {
                 for(String arg:args)
                     System.out.println(walk(arg));
         }
-    }
+
 }
