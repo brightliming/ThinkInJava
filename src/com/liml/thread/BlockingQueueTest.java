@@ -44,7 +44,7 @@ public class BlockingQueueTest {
                     while(true){
                         String apple = (String)basket.take();
                         consumerCount++;
-                        System.out.println(apple+"===============consumer"+consumerCount);
+                        System.out.println(apple+ "===============consumer"+consumerCount);
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();

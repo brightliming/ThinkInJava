@@ -13,9 +13,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 public class BlockingQueueTest2 {
     /**
-     *
      * 定义装苹果的篮子
-     *
      */
     public class Basket {
         // 篮子，能够容纳3个苹果
@@ -30,7 +28,7 @@ public class BlockingQueueTest2 {
         // 消费苹果，从篮子中取走
         public String consume() throws InterruptedException {
             // take方法取出一个苹果，若basket为空，等到basket有苹果为止(获取并移除此队列的头部)
-            return (String)basket.take();
+            return (String) basket.take();
         }
     }
 
@@ -52,7 +50,7 @@ public class BlockingQueueTest2 {
                     basket.produce();
                     System.out.println("!生产者生产苹果完毕：" + instance);
                     // 休眠300ms
-                   // Thread.sleep(300);
+                    // Thread.sleep(300);
                 }
             } catch (InterruptedException ex) {
                 System.out.println("Producer Interrupted");

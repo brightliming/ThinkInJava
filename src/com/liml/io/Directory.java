@@ -33,19 +33,19 @@ public final class Directory {
         public Iterator<File> iterator() {
             return files.iterator();
         }
-        void addAll(TreeInfo other){
-            files.addAll(other.files);
-            dirs.addAll(other.dirs);
-        }
         public String toString(){
             return "dirs: "+ PPrint.pformat(dirs) +
                     "\n\nfiles: "+PPrint.pformat(files);
         }
+        void addAll(TreeInfo other){
+            files.addAll(other.files);
+            dirs.addAll(other.dirs);
+        }
     }
-        public static TreeInfo walk(String start,String regex){
+    public static TreeInfo walk(String start,String regex){
             return recurseDirs(new File(start),regex);
         }
-        public static TreeInfo walk(File start,String regex){
+    public static TreeInfo walk(File start,String regex){
             return recurseDirs(start,regex);
         }
         public static TreeInfo walk(File start){
