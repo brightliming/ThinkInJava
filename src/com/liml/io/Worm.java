@@ -57,38 +57,38 @@ public class Worm implements Serializable{
         return result.toString();
     }
     public static void main(String[] args) throws ClassNotFoundException,IOException{
-//        Worm w = new Worm(6,'a');
-//        System.out.println("w = " + w);
-//        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("worm.out"));
-//
-//        out.writeObject("Worm storage\n");
-//        out.writeObject(w);
-//        out.close();
-//
-//        ObjectInputStream in = new ObjectInputStream(new FileInputStream("worm.out"));
-//
-//        String s = (String)in.readObject();
-//
-//        Worm w2 = (Worm)in.readObject();
-//        System.out.println(s + "w2 = "+ w2);
-        List<String> dataList = new ArrayList<String>();
-        dataList.add("bright");
-        dataList.add("liming");
-        Data data = new Data(20);
-        data.setDataList(dataList);
-        System.out.println("data = " + data);
-        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.out"));
+        Worm w = new Worm(6,'a');
+        System.out.println("w = " + w);
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("worm.out"));
 
-        out.writeObject("Data storage\n");
-        out.writeObject(data);
+        out.writeObject("Worm storage\n");
+        out.writeObject(w);
         out.close();
 
-        ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.out"));
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("worm.out"));
 
         String s = (String)in.readObject();
 
-        Data data2 = (Data)in.readObject();
-        System.out.println(s + "data2 = "+ data2);
+        Worm w2 = (Worm)in.readObject();
+        System.out.println(s + "w2 = "+ w2);
+//        List<String> dataList = new ArrayList<String>();
+//        dataList.add("bright");
+//        dataList.add("liming");
+//        Data data = new Data(20);
+//        data.setDataList(dataList);
+//        System.out.println("data = " + data);
+//        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.out"));
+//
+//        out.writeObject("Data storage\n");
+//        out.writeObject(data);
+//        out.close();
+//
+//        ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.out"));
+//
+//        String s = (String)in.readObject();
+//
+//        Data data2 = (Data)in.readObject();
+//        System.out.println(s + "data2 = "+ data2);
 
     }
 
