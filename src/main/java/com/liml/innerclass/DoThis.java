@@ -23,10 +23,10 @@ public class DoThis {
     public static void main(String[] args){
         DoThis dt = new DoThis("Tom");
 
-        DoThis.Inner inner = dt.inner();
+        Inner inner = dt.inner();
         inner.outer().f();
 
-        DoThis.Inner inner2 = dt.new Inner();
+        Inner inner2 = dt.new Inner();
         inner2.outer().f();
     }
 }

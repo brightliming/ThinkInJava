@@ -33,7 +33,7 @@ public class Parcel2 {
         parcel.ship();
         Parcel2 q = new Parcel2();
 
-        Parcel2.Content c = q.content();
-        Parcel2.Destination d = q.to("beijing");
+        Content c = q.content();
+        Destination d = q.to("beijing");
     }
 }
