@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by bright on 2017/3/22.
  */
-public final class PhoneNumber {
+public final class PhoneNumber{
     private final short areaCode;
     private final short prefix;
     private final short lineNumber;
@@ -55,7 +55,7 @@ public final class PhoneNumber {
         return result;
    }
    public static void main(String[] args){
-       Map<PhoneNumber,String> map = new HashMap<PhoneNumber, String>();
+       HashMap<PhoneNumber,String> map = new HashMap<PhoneNumber, String>();
 
        map.put(new PhoneNumber(10,20,30),"john");
 
