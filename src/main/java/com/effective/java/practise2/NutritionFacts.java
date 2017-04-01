@@ -11,7 +11,7 @@ public class NutritionFacts {
     private final int sodium;
     private final int carbohydrate;
 
-    public static class NutritionFactBuilder implements  Builder<NutritionFacts>{
+    public static class Builder{
         private final int servingSize;
         private final int serving;
         private  int calories = 0;
@@ -19,32 +19,30 @@ public class NutritionFacts {
         private  int sodium = 0;
         private  int carbohydrate = 0;
 
-        public NutritionFactBuilder(int servingSize,int serving){
+        public Builder(int servingSize,int serving){
             this.servingSize = servingSize;
             this.serving = serving;
         }
 
-        public NutritionFactBuilder calories(int val){
+        public Builder calories(int val){
             calories = val;
             return this;
         }
 
-        public NutritionFactBuilder fat(int val){
+        public Builder fat(int val){
             fat = val;
             return this;
         }
 
-        public NutritionFactBuilder sodium(int val){
+        public Builder sodium(int val){
             sodium = val;
             return this;
         }
 
-        public NutritionFactBuilder carbohydrate(int val){
+        public Builder carbohydrate(int val){
             carbohydrate = val;
             return this;
         }
-
-
 
         public NutritionFacts build() {
             return new NutritionFacts(this);
@@ -52,6 +50,15 @@ public class NutritionFacts {
     }
 
     private NutritionFacts(Builder builder){
+        servingSize = builder.servingSize;
+        serving = builder.serving;
+        calories = builder.calories;
+        fat = builder.fat;
+        sodium = builder.sodium;
+        carbohydrate = builder.carbohydrate;
+    }
 
+    public static void main(String[] args){
+        NutritionFacts nutritionFacts = new NutritionFacts.Builder(0,2).calories(2).build();
     }
 }
